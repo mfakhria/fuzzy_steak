@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fuzzy Steak</title>
+  <link rel="stylesheet" href="css/output.css" />
+</head>
+<body class="bg-orange-700">
+  <!-- NAVBAR -->
+  <nav class="bg-orange-800 border-gray-200">
+    <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+      <a href="https://flowbite.com/" class="flex items-center space-x-3 rtl:space-x-reverse">
+        <img src="steak.svg" class="h-8" alt="Flowbite Logo" />
+        <span class="self-center text-3xl font-light whitespace-nowrap text-white">SteakFuzzy</span>
+      </a>
+
+      <ul class="font-medium flex flex-row">
+        <li>
+          <a href="index.html" class="block py-2 px-3 text-white hover:text-yellow-300 transition-all" aria-current="page">Home</a>
+        </li>
+        <li>
+          <a href="hitung.html" class="block py-2 px-3 text-yellow-300">Fuzzy</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- FUZZY -->
+  <div class="max-w-6xl mx-auto items-center p-4 mt-20">
+    <p class="md:text-3xl text-xl bg-orange-600 w-fit mx-auto font-bold p-3 text-white md:rounded-full rounded-lg md:mb-0 mb-3">Temperature and Time Calculations</p>
+    <form action="proses.php" method="post">
+      <div class="flex flex-col">
+        <label for="suhu" class="text-center md:text-2xl text-lg font-bold text-white md:p-4 p-3">Temperature (200-350°C):</label>
+        <input
+          type="number"
+          id="suhu"
+          name="suhu"
+          min="200"
+          max="350"
+          class="mb-4 h-8 rounded-md bg-slate-200 font-semibold text-xl"
+          required
+        />
+        <label for="waktu" class="text-center md:text-2xl text-lg font-bold text-white p-3">Time (3-15 menit):</label>
+        <input
+          type="number"
+          id="waktu"
+          name="waktu"
+          min="3"
+          max="15"
+          class="mb-4 h-8 rounded-md bg-slate-200 font-semibold text-xl"   
+          required
+        />
+        <input type="submit" value="Count" class="bg-yellow-500 w-fit mx-auto p-3 rounded-xl text-xl text-white font-semibold hover:bg-yellow-600 transition-all"/>
+      </div>
+    </form>
+  </div>
+</body>
+</html>
+    
